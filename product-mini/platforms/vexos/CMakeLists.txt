@@ -70,7 +70,7 @@ endif ()
 
 if (NOT DEFINED WAMR_BUILD_INTERP)
     # Enable Interpreter by default
-    set (WAMR_BUILD_INTERP 0)
+    set (WAMR_BUILD_INTERP 1)
 endif ()
 
 if (NOT DEFINED WAMR_BUILD_AOT)
@@ -96,6 +96,10 @@ endif ()
 #if (NOT DEFINED  WAMR_BUILD_GLOBAL_HEAP_SIZE)
 #    add_compile_definitions (WASM_GLOBAL_HEAP_SIZE=20970000) # 20 Mb
 #endif ()
+
+# Enable GC and EH 
+set (WAMR_BUILD_EXCE_HANDLING 1)
+set (WAMR_BUILD_GC 1)
 
 
 include (${WAMR_ROOT_DIR}/build-scripts/runtime_lib.cmake)

@@ -114,10 +114,6 @@ if (NOT DEFINED WAMR_BUILD_REF_TYPES)
   set (WAMR_BUILD_REF_TYPES 1)
 endif ()
 
-# Enable GC and EH 
-set (WAMR_BUILD_EXCE_HANDLING 1)
-set (WAMR_BUILD_GC 1)
-
 set (WAMR_ROOT_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 
 include (${WAMR_ROOT_DIR}/build-scripts/runtime_lib.cmake)
